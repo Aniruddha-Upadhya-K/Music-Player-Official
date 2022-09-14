@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Romanesco&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="songContainer">
+            <div data-key="1" class="song">
+                <p class="key">1</p>
+                <p class="detail">Interstellar (Remix)</p>
+            </div>
+            <div data-key="2" class="song">
+                <p class="key">2</p>
+                <p class="detail">Heart of Courage - TSFH</p>
+            </div>
+            <div data-key="3" class="song">
+                <p class="key">3</p>
+                <p class="detail">Legends Never Die - LOL</p>
+            </div>
+            <div data-key="4" class="song">
+                <p class="key">4</p>
+                <p class="detail">Toofan - KGF Chapter 2</p>
+            </div>
+            <div data-key="5" class="song">
+                <p class="key">5</p>
+                <p class="detail">Khwaab- Anumita Nadesan</p>
+            </div>
+            <div data-key="6" class="song">
+                <p class="key">6</p>
+                <p class="detail">2002 - Anne Marie</p>
+            </div>
+            <div data-key="7" class="song">
+                <p class="key">7</p>
+                <p class="detail">Kun Faya Kun - Rockstar</p>
+            </div>
+            <div data-key="8" class="song">
+                <p class="key">8</p>
+                <p class="detail">Vaseegara - Minnale</p>
+            </div>
+            <div data-key="9" class="song">
+                <p class="key">9</p>
+                <p class="detail">Jeet - Ritviz</p>
+            </div>
+        </div>
+        <div class="controller">
+            <div class="controls">
+                <div class="icon play">
+                    <span onclick="playBtn()" class="material-icons">
+                        play_arrow
+                    </span>
+                </div>
+                <div class="icon pause">
+                    <span onclick="pauseBtn()" class="material-icons">
+                        pause
+                    </span>
+                </div>
+                <div class="icon replay">
+                    <span onclick="replayBtn()" class="material-icons">
+                        replay
+                    </span>
+                </div>
+                <div class="icon stop">
+                    <span onclick="stopBtn()" class="material-icons">
+                        stop
+                    </span>
+                </div>
+                <div class="icon loop">
+                    <span onclick="loopBtn()" class="material-icons loopIcon">
+                        loop
+                    </span>
+                </div>
+            </div>
+            <div class="playerBar">
+                <div class="playTime"></div>
+                <div class="backgroundBar">
+                    <div class="playBar"></div>
+                </div>
+                <div class="endTime"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio data-key="1" src="audio/Interstellar.mp3"></audio>
+    <audio data-key="2" src="audio/Heart of Courage.mp3"></audio>
+    <audio data-key="3" src="audio/Legends Never Die.mp3"></audio>
+    <audio data-key="4" src="audio/Toofan (Kannada).mp3"></audio>
+    <audio data-key="5" src="audio/Khwaab- Anumita Nadesan.mp3"></audio>
+    <audio data-key="6" src="audio/Anne-Marie - 2002 [Official Video].mp3"></audio>
+    <audio data-key="7" src="audio/Kun Faya Kun.mp3"></audio>
+    <audio data-key="8" src="audio/Vaseegara.mp3"></audio>
+    <audio data-key="9" src="audio/Ritviz - JEET.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

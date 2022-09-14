@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(203, 206, 224);
+    color: rgb(156, 166, 221);
+    /* color: rgba(0, 0, 0, 1); */
+    user-select: none;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("BingImageOfTheDay_20200823.jpg") center/cover no-repeat;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.songContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(22, 21, 21, 0.65);
+    height: 25vh;
+    min-height: 5rem;
+    width: 20%;
+    min-width: 125px;
+    margin: 2px;
+    cursor: pointer;
+    transition: all 500ms linear;
+    border-radius: 20px;
+}
+.songOnStart {
+    animation: songOnStart 1s linear forwards 1;
+    height: 25vh;
+    min-height: 6rem;
+}
+
+@keyframes songOnStart {
+    from {
+        height: 25vh;
+    }
+    to {
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .song {
+        width: 45%;
+        height: 18.5vh;
+    }
+    .songOnStart {
+        animation: songOnStartMobile 1s linear forwards 1;
+        height: 15vh;
+        min-height: 5rem;
+    }
+    @keyframes songOnStartMobile {
+        from {
+            height: 18.5vh;
+        }
+        to {
+            height: 17vh;
+        }
+    }
+}
+
+.key {
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(230, 230, 255);
+}
+
+.playingSongKey {
+    color: rgb(156, 166, 221);
+}
+
+.detail {
+    /* font-style: italic; */
+    font-family: 'Romanesco', cursive;
+    font-size: 1.75rem;
+}
+
+.playingSongDetail {
+    color: rgb(230, 230, 255);
+}
+
+.playingSong {
+    background-color: rgba(156, 166, 221, 0.5);
+}
+
+
+
+.detail {
+    text-align: center;
+    margin: 5px;
+}
+.controller {
+    display: none;
+    overflow: hidden;
+}
+.controllerOnStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    min-height: 75px;
+    opacity: 1;
+    animation: onStart 1s linear forwards 1;
+}
+
+@keyframes onStart {
+    from {
+        height: 0vh;
+        min-height: 0px;
+        opacity: 0;
+    }
+    to {
+        height: 15vh;
+        min-height: 75px;
+        opacity: 1;
+    }
+}
+
+.controllerOnEnd {
+    animation: onEnd 1s linear forwards 1;
+}
+
+@keyframes onEnd {
+    from {
+        height: 15vh;
+        min-height: 75px;
+        opacity: 1;
+    }
+    to {
+        height: 0vh;
+        min-height: 0px;
+        opacity: 0;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+    height: 3rem;
+    max-width: 400px;
+    min-width: 200px;
+    border: 2px solid rgb(156, 166, 221);
+    border-radius: 20px;
+}
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(156, 166, 221); */
+}
+.material-icons {
+    scale: 1.33;
+}
+.backgroundBar {
+    position: relative;
+    width: 50vw;
+    min-width: 150px;
+    height: 5px;
+    background-color: rgb(84, 60, 219);
+    border-radius: 25px;
+    overflow: hidden;
+}
+.playerBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playTime, .endTime {
+    margin: 0 10px;
+    color: rgb(230, 230, 255);
+}
+.playBar {
+    position: absolute;
+    width: 50vw;
+    min-width: 150px;
+    height: 5px;
+    background-color: rgb(143, 130, 221);
+    ;
+    border-radius: 25px;
+    transform: translateX(-100%);
+}
+.play {
+    display: none;
+    align-self: center;
+}
+.pause {
+    display: block;
+}
+.replay {
+    display: none;
+}
